@@ -9,7 +9,12 @@ public class Drive {
 		{
 			aRecord.addPRecord(name.getOneFName(), name.getOneLName(), 1 + (int)(Math.random() * 85));
 		}
-		aRecord.displayInOrder();
+		System.out.println("The lower left Patient Record:");
+		aRecord.getLowerLeftPatient().display();
+		System.out.println("The Root Patient Record:");
+		aRecord.getRoot().display();
+		System.out.println("The lower Right Patient Record:");
+		aRecord.getLowerRightPatient().display();
 	}
 
 }

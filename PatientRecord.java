@@ -24,4 +24,29 @@ public class PatientRecord
 	{
 		this.rootPR.displayInOrder();
 	}
+	
+	public BinaryTree getLowerLeftPatient()
+	{
+		BinaryTree currTree = this.rootPR;
+		while (currTree.visitLeft() != null)
+		{
+			currTree = currTree.visitLeft();
+		}
+		return currTree;
+	}
+	
+	public BinaryTree getLowerRightPatient()
+	{
+		BinaryTree currTree = this.rootPR;
+		while (currTree.visitRight() != null)
+		{
+			currTree = currTree.visitRight();
+		}
+		return currTree;
+	}
+	
+	public BinaryTree getRoot()
+	{
+		return this.rootPR;
+	}
 }

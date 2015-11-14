@@ -42,16 +42,45 @@ public class BinaryTree
 		}
 	}
 	
+	public void display()
+	{
+		System.out.println(this.FName + " " + this.LName + ": " + this.Age);
+	}
+	
 	public void displayInOrder()
 	{
 		if (this.leftTree != null)
 		{
 			this.leftTree.displayInOrder();
 		}
-		System.out.println(this.FName + " " + this.LName + ": " + this.Age);
+		this.display();
 		if (this.rightTree != null)
 		{
 			this.rightTree.displayInOrder();
+		}
+	}
+	
+	public BinaryTree visitLeft()
+	{
+		if (this.leftTree != null)
+		{
+			return this.leftTree;
+		}
+		else
+		{
+			return null;
+		}
+	}
+	
+	public BinaryTree visitRight()
+	{
+		if (this.rightTree != null)
+		{
+			return this.rightTree;
+		}
+		else
+		{
+			return null;
 		}
 	}
 }
